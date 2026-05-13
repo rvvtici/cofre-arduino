@@ -1,8 +1,7 @@
 # cofre-arduino
 
 ## Implementação no TinkerCad
-<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/d32c20fd-70a8-41cf-9796-9193f489a750" />
-
+<img width="500" height="300" alt="implementacao-no-tinkercad" src="https://github.com/user-attachments/assets/d32c20fd-70a8-41cf-9796-9193f489a750" />
 
 ## Objetivo
 Criação de um locker inteligente com feedback multissensorial, implementando um sistema de controle de acesso para um compartimeneto seguro. O sistema deve gerenciar a entrada de uma senha, validar o acesso e monitorar condiçõe s de segurança do ambiente.
@@ -13,8 +12,8 @@ Criação de um locker inteligente com feedback multissensorial, implementando u
 
 ## Como Rodar Fisicamente
 - Instale o software do Arduino em: https://www.arduino.cc/en/software/
-- Conecte todos os cabos e periféricos de acordo com a foto: [[foto tinkercad]]
-- Rode e siga as [[instruções]] abaixo
+- Conecte todos os cabos e periféricos de acordo com a [foto](#implementação-no-tinkercad)
+- Rode e siga as [instruções](#instruções-dos-estados) abaixo
   
 ## Componentes Utilizados
 - Arduino Uno;
@@ -33,9 +32,9 @@ Criação de um locker inteligente com feedback multissensorial, implementando u
 - A senha (1326) é de quatro dígitos e deve ser inserida a partir dos quatro botões de dígito;
 
 ## Fluxo (desenho em fluxograma)
+<img width="500" height="250" alt="fluxo" src="https://github.com/user-attachments/assets/3663c163-9f22-4169-b52e-afb99de53ef6" />
 
-
-## Estados
+## Instruções dos Estados
 - TRANCADO: Estado inicial do cofre. Mostra "TRANCADO" em seu display e mantém o led vermelho aceso;
 - SENHA: Estado ativado caso qualquer botão seja pressionado e o estado anterior seja TRANCADO. Exibe display "SENHA: 0000" e é responsivo às entradas do usuário;
 - ALERTA: Estado ativado caso a SENHA esteja incorreta. No display: "SENHA INCORRETA: x/3", sendo x a quantidade de tentativas incorretas preenchidas pelo usuário. Aleḿ disso, o led vermelho pisca e o buzzer é ativado por 1s;
@@ -48,7 +47,4 @@ teste
 ```
 
 ## Diagrama de Conexão:
-desenho de como tudo se conecta, +, -, portas etc (schematic view do tinkercad)
-<img width="600" height="450" alt="image" src="https://github.com/user-attachments/assets/6ed68509-2700-4dfa-bdd6-8cd2a5898098" />
-
-
+<img width="600" height="450" alt="diagrama-de-conexao" src="https://github.com/user-attachments/assets/6ed68509-2700-4dfa-bdd6-8cd2a5898098" />

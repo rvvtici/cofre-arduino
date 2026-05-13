@@ -1,7 +1,8 @@
 # cofre-arduino
 
 ## Implementação no TinkerCad
-[[foto]]
+<img width="500" height="300" alt="image" src="https://github.com/user-attachments/assets/d32c20fd-70a8-41cf-9796-9193f489a750" />
+
 
 ## Objetivo
 Criação de um locker inteligente com feedback multissensorial, implementando um sistema de controle de acesso para um compartimeneto seguro. O sistema deve gerenciar a entrada de uma senha, validar o acesso e monitorar condiçõe s de segurança do ambiente.
@@ -48,3 +49,6 @@ teste
 
 ## Diagrama de Conexão:
 desenho de como tudo se conecta, +, -, portas etc (schematic view do tinkercad)
+<img width="600" height="450" alt="image" src="https://github.com/user-attachments/assets/6ed68509-2700-4dfa-bdd6-8cd2a5898098" />
+
+

@@ -1,8 +1,6 @@
 #include <LiquidCrystal.h>
 #include <Servo.h>
 
-// acho q no readme vou ir comentando cada funcao, setup, loop.
-//ver os leds vermelhos e o buzzer
 
 //estados
 #define TRANCADO 0
@@ -32,6 +30,7 @@ int terceiro_botao = 8;
 int quarto_botao = 3;
 int reset_botao = 2;
 int enter_botao = A4;
+
 
 //variáveis globais
 const int servomotor_aberto = 90;

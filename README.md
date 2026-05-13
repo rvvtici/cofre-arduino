@@ -42,4 +42,8 @@ Criação de um locker inteligente com feedback multissensorial, implementando u
 - ABERTO: Caso a senha correta (1326) seja preenchida, o cofre (servomotor) abre, o led verde liga. Após dez segundos de abertura, começa a detectar a luz do ambiente com o fotossensor. Caso a luz esteja baixa, o cofre (servomotor) fecha.
 
 ## Diagrama de Conexão:
-<img width="600" height="450" alt="diagrama-de-conexao" src="https://github.com/user-attachments/assets/6ed68509-2700-4dfa-bdd6-8cd2a5898098" />
+<img width="450" height="375" alt="diagrama-de-conexao" src="https://github.com/user-attachments/assets/6ed68509-2700-4dfa-bdd6-8cd2a5898098" />
+
+## Participantes
+- Ana Beatriz Sousa Lima R.A.: 22.124.085-6
+- Ravi Macedo Ticianelli Lima R.A.: 22.124.069-0

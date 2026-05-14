@@ -39,7 +39,7 @@ Criação de um locker inteligente com feedback multissensorial, implementando u
 - SENHA: Estado ativado caso qualquer botão seja pressionado no estado TRANCADO. Exibe display "SENHA: 0000" e é responsivo às entradas do usuário, além de manter a luz vermelha ligada;
 - ALERTA: Estado ativado caso a SENHA esteja incorreta. No display: "SENHA INCORRETA: x/3", sendo x a quantidade de tentativas incorretas preenchidas pelo usuário. Além disso, o led vermelho pisca junto ao buzzer;
 - BLOQUEADO: Ocorre caso SENHA tenha três tentativas incorretas. Exibe "BLOQUEADO 10s" no display com um countdown até zero segundos, além de piscar led vermelho e acionar o buzzer. Após a contagem, retorna ao estado TRANCADO;
-- ABERTO: Caso a senha correta (1326) seja preenchida, o cofre (servomotor) abre, o led verde liga. Após dez segundos de abertura, começa a detectar a luz do ambiente com o fotossensor. Caso a luz esteja baixa, o cofre (servomotor) fecha.
+- ABERTO: Caso a senha correta (1326) seja preenchida, o cofre (servomotor) abre, o led verde liga. Após dez segundos de abertura, começa a detectar a luz do ambiente com o fotossensor. Caso a luz esteja baixa, o cofre (servomotor) fecha após cinco segundos.
 
 ## Diagrama de Conexão:
 <img width="450" height="375" alt="diagrama-de-conexao" src="https://github.com/user-attachments/assets/6ed68509-2700-4dfa-bdd6-8cd2a5898098" />

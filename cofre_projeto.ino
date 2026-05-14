@@ -1,6 +1,8 @@
 #include <LiquidCrystal.h>
 #include <Servo.h>
 
+// acho q no readme vou ir comentando cada funcao, setup, loop.
+//ver os leds vermelhos e o buzzer
 
 //estados
 #define TRANCADO 0
@@ -30,7 +32,6 @@ int terceiro_botao = 8;
 int quarto_botao = 3;
 int reset_botao = 2;
 int enter_botao = A4;
-
 
 //variáveis globais
 const int servomotor_aberto = 90;
@@ -86,6 +87,8 @@ void loop() {
     lcd_1.clear();
     estadoAnterior = estadoAtual;
   }
+  
+  Serial.println(luz);
   
   //cada estado tem atribuição à sua respectiva função
   switch (estadoAtual) {
@@ -266,11 +269,12 @@ void FuncaoAberto() {
   }
   
   // depois de 10s verifica a luz. se tiver luz chegando dentro do cofre, continua aberto
-  if (luz < 700) {
+  if (luz < 800) {
     return;
   }
 
-  // sem luz -> fecha cofre
+  // sem luz -> apos 5s fecha cofre
+  delay(5000);
   servomotor.write(servomotor_fechado);
   reset();
   estadoAtual = TRANCADO;
@@ -282,7 +286,7 @@ void FuncaoAberto() {
 //obtem segundo atual e compara com timer_senha. caso tenha passado de 10s, volta ao estado TRANCADO
 void contagemEstado(unsigned long tempo, int proximoEstado) {
   if (millis() - timer >= tempo) {
-    timer       = millis();
+    timer = millis();
     estadoAtual = proximoEstado;
   }
 }
@@ -305,7 +309,7 @@ void enter() {
   } else { // senha incorreta
     tone(buzzer, 350, 100);
     tentativas++;
-    timer       = millis();
+    timer = millis();
     estadoAtual = ALERTA;
   }
 }
@@ -315,9 +319,9 @@ void enter() {
 // função caso botão reset seja pressionado
 void reset() {
   primeiro_digito = 0;
-  segundo_digito  = 0;
+  segundo_digito = 0;
   terceiro_digito = 0;
-  quarto_digito   = 0;
+  quarto_digito = 0;
 }
 
 
